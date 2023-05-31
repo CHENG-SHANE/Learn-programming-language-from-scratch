@@ -1,0 +1,28 @@
+# Project: ノㄧΑ㊣┮Τ肈ヘ
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = ㊣┮Τㄧ计祘Α.o
+LINKOBJ  = ㊣┮Τㄧ计祘Α.o
+LIBS     = -L"C:/Users/shane/Downloads/Dev-Cpp/MinGW64/lib" -L"C:/Users/shane/Downloads/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Users/shane/Downloads/Dev-Cpp/MinGW64/include" -I"C:/Users/shane/Downloads/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Users/shane/Downloads/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Users/shane/Downloads/Dev-Cpp/MinGW64/include" -I"C:/Users/shane/Downloads/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Users/shane/Downloads/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Users/shane/Downloads/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = ノㄧΑ㊣┮Τ肈ヘ.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+㊣┮Τㄧ计祘Α.o: ㊣┮Τㄧ计祘Α.cpp
+	$(CPP) -c ㊣┮Τㄧ计祘Α.cpp -o ㊣┮Τㄧ计祘Α.o $(CXXFLAGS)
